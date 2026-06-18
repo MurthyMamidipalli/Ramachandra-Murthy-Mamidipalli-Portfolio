@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ramachandra Murthy - Portfolio</title>
   
-  <!-- Load React, ReactDOM, Babel, and Tailwind CSS -->
   <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -166,7 +165,7 @@
       };
 
       const generateAIResponse = async (userPrompt, isChat = true) => {
-        const apiKey = ""; // Add your Gemini API key here if you want it to work live
+        const apiKey = ""; 
         if(!apiKey) return "API Key not configured. Please add your Gemini API Key to the code.";
         const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
         
@@ -269,7 +268,6 @@
             </div>
           </header>
 
-          {}
           <main className="max-w-5xl mx-auto px-6 sm:px-12 lg:px-24 py-16">
             <div className="flex overflow-x-auto space-x-2 sm:space-x-8 border-b border-slate-200 mb-12 pb-2 scrollbar-hide">
               {['about', 'experience', 'products', 'projects', 'education', 'skills', '✨ AI Assistant'].map((tab) => (
@@ -286,8 +284,6 @@
             </div>
 
             <div className="min-h-[400px]">
-              
-              {}
               {activeTab === 'about' && (
                 <div className="space-y-8 animate-fade-in">
                   <section className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
@@ -345,7 +341,6 @@
                 </div>
               )}
 
-              {}
               {activeTab === 'products' && (
                 <div className="space-y-8 animate-fade-in">
                   <div className="mb-6">
@@ -428,7 +423,6 @@
                 </div>
               )}
 
-              {}
               {activeTab === 'education' && (
                 <div className="space-y-8 animate-fade-in">
                   <h3 className="text-2xl font-bold mb-6 flex items-center gap-2"><GraduationCap className="text-blue-600" /> Education</h3>
@@ -483,7 +477,6 @@
                   </div>
 
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    {/* Chat Interface */}
                     <div className="bg-white rounded-2xl shadow-sm border border-slate-100 flex flex-col h-[500px] overflow-hidden">
                       <div className="bg-slate-50 border-b border-slate-100 p-4 flex items-center gap-3">
                         <Bot className="text-blue-600" size={24} />
@@ -533,7 +526,6 @@
                       </div>
                     </div>
 
-                    {/* Pitch Generator Interface */}
                     <div className="bg-white rounded-2xl shadow-sm border border-slate-100 flex flex-col h-[500px] overflow-hidden">
                       <div className="bg-slate-50 border-b border-slate-100 p-4 flex items-center gap-3">
                         <FileText className="text-blue-600" size={24} />
